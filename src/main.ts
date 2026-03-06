@@ -779,8 +779,8 @@ async function main() {
     }
     
     gateway.addAgent(agentConfig.name, bot);
-    agentStores.set(agentConfig.name, bot.store);
-    sessionInvalidators.set(agentConfig.name, (key) => bot.invalidateSession(key));
+//    agentStores.set(agentConfig.name, bot.store);
+//    sessionInvalidators.set(agentConfig.name, (key) => bot.invalidateSession(key));
     agentChannelMap.set(agentConfig.name, adapters.map(a => a.id));
   }
   
