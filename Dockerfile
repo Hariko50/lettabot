@@ -5,10 +5,14 @@ USER root
 
 WORKDIR /app
 
-# 1. System-Abhängigkeiten installieren (ffmpeg)
+# System-Tools für TTS installieren
+USER root
 RUN apt-get update && apt-get install -y \
+    jq \
+    curl \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
+USER node
 
 # 2. Projektdateien kopieren
 COPY . .
