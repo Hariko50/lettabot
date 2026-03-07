@@ -19,14 +19,10 @@ WORKDIR /app
 # 2. Den Code aus dem reparierten Main-Branch klonen
 RUN git clone --depth 1 --branch main https://github.com/letta-ai/lettabot.git .
 
-# 3. DEINE lettabot.yaml in den Container kopieren
-# Das muss hier stehen, damit git clone nicht blockiert wird!
-COPY lettabot.yaml /app/lettabot.yaml
-
-# 4. Bauen und verlinken
+# 3. Bauen und verlinken
 RUN npm install && \
     npm run build && \
     npm link
 
-# 5. Den Bot starten
+# 4. Den Bot starten
 CMD ["lettabot", "server"]
