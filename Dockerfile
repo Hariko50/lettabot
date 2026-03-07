@@ -17,7 +17,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # 2. Den Code klonen (Jetzt mit SSL-Vertrauen!)
-RUN git clone --depth 1 --branch v0.2.0-alpha.11 https://github.com/letta-ai/lettabot.git .
+RUN git clone --depth 1 --branch v0.2.0-alpha.10 https://github.com/letta-ai/lettabot.git .
 
 # 3. Bauen und verlinken
 RUN npm install && \
