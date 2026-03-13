@@ -17,7 +17,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # 2. Den Code aus dem reparierten Main-Branch klonen
-RUN git clone --depth 1 --branch v0.2.0-alpha.12 https://github.com/letta-ai/lettabot.git .
+RUN git clone --depth 1 --branch v0.2.0-alpha.13 https://github.com/letta-ai/lettabot.git .
 # 3. Bauen und verlinken
 RUN npm install && \
     npm run build && \
